@@ -1,14 +1,42 @@
 package intro;
 
+import java.util.Scanner;
+
 public class medidas {
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
-        calcularAreaModoCurto();
-        calcularAreaModoExtenso();
+        String opcao = "melancia";
+
+        switch (opcao) {
+            case "ifSimples":
+                System.out.println("Vc escolheu executar o metodo ifSimples");
+                ifSimples();
+                break;
+            case "Curto":
+                System.out.println("Vc escolheu executar o metodo curto");
+                calcularAreaModoCurto();
+                break;
+            case "Extenso":
+                System.out.println("Vc escolheu executar o metodo extenso");
+                calcularAreaModoExtenso();
+                break;
+            default:
+                System.out.println("voce escolheu outro valor");
+                break;
+        }
+    }
+    public static void ifSimples(){
+        String modo = "curto";
+
+        if (modo == "curto") {
+            calcularAreaModoCurto();
+        } else {
+            calcularAreaModoExtenso();
+        }
     }
 
-        public static void calcularAreaModoCurto(){
+   public static void calcularAreaModoCurto(){
 
             System.out.println("Cálculo de área Modo curto");
 
